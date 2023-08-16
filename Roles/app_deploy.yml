@@ -1,0 +1,11 @@
+---
+- name: Copy application files
+  copy:
+    src: /path/to/your/application/files
+    dest: /var/www/myapp
+
+- name: Start application service
+  systemd:
+    name: myapp
+    state: started
+    enabled: yes
